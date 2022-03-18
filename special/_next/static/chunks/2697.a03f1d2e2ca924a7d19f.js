@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[2697],{62697:function(a){a.exports=JSON.parse('{"Book appointment":"Demana cita","Do you want to book an appointment":"Vols demanar la teva cita amb Impress?","Measures COVID-19":"Medidas COVID-19","Privacy Policy":"Pol\xedtica de Privacidad","whatsappMessage":"Quiero reservar una cita","email":"Correo"}')}}]);

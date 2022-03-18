@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[9331],{39331:function(e){e.exports=JSON.parse('{"Bye braces! Invisible orthodontics have arrived!":"Adieu les appareils fixes! L\u2019orthodontie invisible est arriv\xe9e!"}')}}]);

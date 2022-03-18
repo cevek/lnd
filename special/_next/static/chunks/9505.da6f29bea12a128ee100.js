@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[9505],{89505:function(e){e.exports=JSON.parse('{"title":"Participating has its rewards!","socialMediaTitle":"Follow us so you don\'t miss anything","footerTitle":"Contact us whenever you need to"}')}}]);

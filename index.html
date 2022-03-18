@@ -1,0 +1,466 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
+
+        <link rel="preload" href="/special/_next/static/css/c5ee7d385ab95f29193d.css" as="style" />
+        <link rel="stylesheet" href="/special/_next/static/css/c5ee7d385ab95f29193d.css" data-n-g="" />
+        <link rel="preload" href="/special/_next/static/css/9387bfe41ea02f13fc6d.css" as="style" />
+        <link rel="stylesheet" href="/special/_next/static/css/9387bfe41ea02f13fc6d.css" data-n-p="" />
+        <link rel="preload" href="/special/_next/static/css/c72dfe5b21d93ddc6ce0.css" as="style" />
+        <link rel="stylesheet" href="/special/_next/static/css/c72dfe5b21d93ddc6ce0.css" data-n-p="" />
+        <noscript data-n-css=""></noscript>
+        <script
+            defer=""
+            nomodule=""
+            src="/special/_next/static/chunks/polyfills-a40ef1678bae11e696dba45124eadd70.js"
+        ></script>
+        <script src="/special/_next/static/chunks/webpack-4526c82238da32beee16.js" defer=""></script>
+        <script src="/special/_next/static/chunks/framework-c17ffc1190d559eed949.js" defer=""></script>
+        <script src="/special/_next/static/chunks/main-a6ba49e5696e8885b648.js" defer=""></script>
+        <script src="/special/_next/static/chunks/pages/_app-eac9b7396308cd166284.js" defer=""></script>
+        <script src="/special/_next/static/chunks/1389-cbcc8787afa436c0996a.js" defer=""></script>
+        <script src="/special/_next/static/chunks/9396-2fc8a2dd6a9359bd9b97.js" defer=""></script>
+        <script src="/special/_next/static/chunks/7045-576763c932611c7d8f55.js" defer=""></script>
+        <script src="/special/_next/static/chunks/9181-98ae3d45adea83b23ccd.js" defer=""></script>
+        <script src="/special/_next/static/chunks/777-9e51ecc9ca7188bc2dbb.js" defer=""></script>
+        <script src="/special/_next/static/chunks/6477-6726c7979cde086545ea.js" defer=""></script>
+        <script src="/special/_next/static/chunks/7525-148f494617c4e2ff27d3.js" defer=""></script>
+        <script src="/special/_next/static/chunks/pages/universal-4e67c9e45f79466faae7.js" defer=""></script>
+        <script src="/special/_next/static/CUbMuPsMe2B9RMOtuYv5C/_buildManifest.js" defer=""></script>
+        <script src="/special/_next/static/CUbMuPsMe2B9RMOtuYv5C/_ssgManifest.js" defer=""></script>
+
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+    <body>
+        <div class="root">
+            <!-- <div class="real"></div> -->
+            <div class="top">
+                <div class="topBlock">
+                    <div class="container topBlockContainer">
+                        <div class="logo"></div>
+                        <h1 class="head1">
+                            Discover the best version of your smile<br />
+                            <span class="head1Small accent">with Impress Aligners</span>
+                        </h1>
+                        <video class="poster" src="./videos/carmen1.mp4" loop autoplay muted></video>
+                        <h1 class="head2">
+                            Invisible.<br />
+                            Removable.<br />
+                            Comfortable.<br />
+                            <span class="accent">From 49€/month</span>
+                        </h1>
+                        <div class="bookWrap">
+                            <button class="book">Book free appointment</button>
+                            <div class="descr">All medical researches are free (including X-Rays, 3D scans etc.)</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider" id="slider">
+                    <div class="container">
+                        <div class="sliderTop">
+                            <div class="sliderIcon"></div>
+                            <div class="sliderDots">
+                                <div class="sliderDot"></div>
+                                <div class="sliderDot"></div>
+                                <div class="sliderDot"></div>
+                            </div>
+                        </div>
+                        <div class="sliderScroll">
+                            <div class="sliderItem sliderItemActive">
+                                Reflective of Impress’ unconventional approach to dentistry and far from any white,
+                                aseptic environment that you might expect.
+                                <div class="sliderItemFrom logo-frame"></div>
+                            </div>
+                            <div class="sliderItem">
+                                It is the first of its kind in southern Europe and integrating the entire production
+                                process has been a complex task.
+                                <div class="sliderItemFrom logo-finance"></div>
+                            </div>
+                            <div class="sliderItem">
+                                The new facility is the largest technology-driven treatment planning and clear aligner
+                                production facilities in Europe.
+                                <div class="sliderItemFrom logo-eleconomista"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    let options = {
+                        root: document.querySelector('#slider'),
+                        rootMargin: '0px',
+                        threshold: [0, 0.5, 1],
+                    };
+                    const dots = document.querySelectorAll('.sliderDot');
+                    let observer = new IntersectionObserver((e) => {
+                        for (const item of e) {
+                            const idx = [...item.target.parentNode.children].indexOf(item.target);
+                            if (item.intersectionRatio > 0.5) {
+                                dots[idx].classList.add('sliderDotActive');
+                                item.target.classList.add('sliderItemActive');
+                            } else {
+                                dots[idx].classList.remove('sliderDotActive');
+                                item.target.classList.remove('sliderItemActive');
+                            }
+                        }
+                    }, options);
+                    for (const item of document.querySelectorAll('.sliderItem')) {
+                        observer.observe(item);
+                    }
+                </script>
+                <div class="stepsBlock">
+                    <div class="container stepsContainer">
+                        <div class="steps-header">
+                            <div class="how">How Impress works</div>
+                            <h2 class="steps-title">
+                                <span class="accent">3 steps</span> to get your perfect smile with invisible technology
+                            </h2>
+                            <a href="" class="more">More about Invisible Aligners</a>
+                        </div>
+                        <div class="steps">
+                            <div class="step">
+                                <div class="step-num">1</div>
+                                <h2 class="step-title">Get full medical check-up in our clinic</h2>
+                                <div class="step-descr">
+                                    Our orthodontists will do a complete study of your mouth. If there is a need to do a
+                                    pre-treatment—we’ve got you covered.
+                                </div>
+                                <div class="step-poster" style="background-image: url(./posters/im9.jpg)"></div>
+                            </div>
+                            <div class="step">
+                                <div class="step-num">2</div>
+                                <h2 class="step-title">Get your Impress Kit® right to your home</h2>
+                                <div class="step-descr">
+                                    Before commiting to the treatment you will get to see the before and after of your
+                                    smile in a 3D video.
+                                </div>
+                                <div class="step-poster" style="background-image: url(./posters/im5.jpg)"></div>
+                            </div>
+                            <div class="step">
+                                <div class="step-num">3</div>
+                                <h2 class="step-title">Monitor progress with Impress App®</h2>
+                                <div class="step-descr">
+                                    Start your treatmnet and you will get regular online check-ups and full support with
+                                    our Care Team
+                                </div>
+                                <div class="step-poster" style="background-image: url(./posters/im11.jpg)"></div>
+                            </div>
+                        </div>
+                        <div class="bookWrap">
+                            <button class="book">Book free appointment</button>
+                            <div class="descr">All medical researches are free (including X-Rays, 3D scans etc.)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="infoBlock">
+                <div class="container">
+                    <div class="infoItems">
+                        <div class="infoItem">
+                            <h2 class="infoTitle"><span class="accent">We do orthodontics.</span> Not cosmetology</h2>
+                            <div class="infoDescr">
+                                Our goal is a healthy and beatufult smile of yours. We use latest technology to provide
+                                prefessional treartment.
+                            </div>
+                            <div class="infoPoster" style="background-image: url(./posters/im1.jpg)"></div>
+                        </div>
+                        <div class="infoItem">
+                            <h2 class="infoTitle"><span class="accent">120 clinics</span> across 8 countries</h2>
+                            <div class="infoDescr">
+                                You can find one of our clinics near you. And you will enjoy coming there.
+                            </div>
+                            <div class="infoPoster" style="background-image: url(./posters/im4.jpg)"></div>
+                        </div>
+                    </div>
+                    <div class="bookWrap">
+                        <button class="book">Book free appointment</button>
+                        <div class="descr">All medical researches are free (including X-Rays, 3D scans etc.)</div>
+                    </div>
+                </div>
+            </div>
+            <div class="priceBlock">
+                <div class="container priceBlockContainer">
+                    <h2 class="priceTitle">Get the best price for the treatment tailored for you</h2>
+                    <div class="priceTabs">
+                        <div id="tab1" class="priceTabTitle priceTabTitleSelected">1-6 month</div>
+                        <div id="tab2" class="priceTabTitle">7-14 month</div>
+                    </div>
+                    <div class="priceTabContent">
+                        <div class="priceTabContentPriceRows">
+                            <div class="priceTabContentPriceRow">
+                                <div class="priceTabContentPrice">
+                                    <span id="tab-price1">49</span><span class="priceTabContentEuro">€</span>
+                                </div>
+                                <div class="priceTabContentDur">monthly</div>
+                            </div>
+                            <div class="priceTabContentPriceRow">
+                                <div class="priceTabContentPrice">
+                                    <span id="tab-price2">2490</span><span class="priceTabContentEuro">€</span>
+                                </div>
+                                <div class="priceTabContentDur">at once</div>
+                            </div>
+                        </div>
+                        <div class="priceTabContentText">
+                            Impress Kit with all aligners Impress App and 24/7 support Unlimited clinic visits
+                        </div>
+                        <div class="priceTabContentImages"></div>
+                    </div>
+                    <div class="priceDescr">
+                        Duration of the treamtent we will figure after a professional dental check-up. We work with most
+                        of cases and provide pre-treatment and post-treatment.<br /><br />
+                        Comisión de apertura: 0,00%. TIN: 6,50 %. TAE: 6,69%. Sujeto a aprobación de la entidad de
+                        crédito
+                    </div>
+                </div>
+            </div>
+            <script>
+                const tab1 = document.querySelector('#tab1');
+                const tab2 = document.querySelector('#tab2');
+                const tabPrice1 = document.querySelector('#tab-price1');
+                const tabPrice2 = document.querySelector('#tab-price2');
+                const prices = [
+                    [49, 2490],
+                    [65, 3590],
+                ];
+                tab1.onclick = () => {
+                    tab1.classList.add('priceTabTitleSelected');
+                    tab2.classList.remove('priceTabTitleSelected');
+                    tabPrice1.textContent = prices[0][0];
+                    tabPrice2.textContent = prices[0][1];
+                };
+                tab2.onclick = () => {
+                    tab2.classList.add('priceTabTitleSelected');
+                    tab1.classList.remove('priceTabTitleSelected');
+                    tabPrice1.textContent = prices[1][0];
+                    tabPrice2.textContent = prices[1][1];
+                };
+            </script>
+            <div class="bookForm">
+                <div class="container bookFormContainer">
+                    <h2 class="bookFormTitle">Book a free dental check-up</h2>
+                    <div id="__next">
+                        <div class="NewAppointment_form__2itMy NewAppointment_root__3LTb5">
+                            <div
+                                class="NewAppointment_form__2itMy BookAppointmentFullForm_root__1B80E root_light"
+                            ></div>
+                        </div>
+                    </div>
+                    <script id="__NEXT_DATA__" type="application/json">
+                        {
+                            "props": {
+                                "pageProps": {
+                                    "title": "🦷 Impress | Expertos en Ortodoncia Invisible 🦷",
+                                    "description": "Somos Impress especialistas en tratamientos de ortodoncia invisible. Tenemos el mejor precio del mercado en Alineadores invisibles. Fácil, estético y rápido...",
+                                    "contentFolder": "universal",
+                                    "language": "spain",
+                                    "version": "spain",
+                                    "locale": "es",
+                                    "__lang": "es",
+                                    "__namespaces": {
+                                        "global": {
+                                            "Book appointment": "Pide cita",
+                                            "Do you want to book an appointment": "¿Quieres pedir tu cita con Impress?",
+                                            "Book your appointment with Impress": "¡Pide tu cita con Impress!",
+                                            "Schedule my appointment": "Programar visita",
+                                            "Teeth crowding": "Apiñamiento de dientes",
+                                            "Copy": "Copiar",
+                                            "Copied": "Copiado",
+                                            "Measures COVID-19": "Medidas COVID-19",
+                                            "Privacy Policy": "Política de Privacidad",
+                                            "Book an appointment": "Reserva una cita",
+                                            "Make an appointment": "Reserva tu cita",
+                                            "Learn more": "Saber más",
+                                            "Legal notice": "Aviso legal",
+                                            "Cookies settings": "Configuración de cookies",
+                                            "Help": "Ayuda",
+                                            "How it works": "Cómo funciona",
+                                            "Price": "Precios",
+                                            "Results": "Resultados",
+                                            "Who we are": "Quiénes somos",
+                                            "Location": "Localizaciones",
+                                            "Our locations": "Nuestras localizaciones",
+                                            "Our blog": "Nuestro blog",
+                                            "Smile with us": "Sonríe con nosotros",
+                                            "Why Impress?": "¿Por qué Impress?",
+                                            "email": "Correo",
+                                            "whatsappMessage": "Hola Impress, me gustaría recibir más información sobre vuestros alineadores invisibles.",
+                                            "countryName": {
+                                                "ukraine": "Ucrania",
+                                                "france": "Francia",
+                                                "switzerland": "Suiza",
+                                                "uk": "Reino Unido",
+                                                "italy": "Italia",
+                                                "portugal": "Portugal",
+                                                "spain": "España"
+                                            }
+                                        },
+                                        "prices": {
+                                            "legalSorteo": {
+                                                "spain": "Comisión de apertura: 0,00%. TIN: 6,50 %. TAE: 6,69%. Sujeto a aprobación de la entidad de crédito",
+                                                "italy": "",
+                                                "portugal": "",
+                                                "uk": "",
+                                                "switzerland": "",
+                                                "france": "",
+                                                "ukraine": ""
+                                            },
+                                            "priceMayVary": "El precio puede variar si se trata del tratamiento PLUS ({{amount}}). Sujeto a decisión médica.",
+                                            "instalments": "cuotas",
+                                            "6 months": "6 meses",
+                                            "Short treatments 6 months": "Tratamientos cortos \u003cstrong\u003e6 meses\u003c/strong\u003e",
+                                            "Impress Regular treatment description": "El tratamiento Impress está indicado para aquellos casos en que las sonrisas necesitan un ligero movimiento de dientes y que la oclusión de la boca no es el principal problema del paciente.",
+                                            "Owerbite or Crossbite": "Sobremordida ligera",
+                                            "Mild rotations": "Rotaciones ligeras",
+                                            "Mild spacing": "Diastemas leves",
+                                            "7-14 months": "7-14 meses",
+                                            "Long treatments 12 months": "Tratamientos largos \u003cbr/\u003e\u003cstrong\u003e12 meses\u003c/strong\u003e",
+                                            "Impress Plus treatment description": "Recomendamos Impress PLUS en los casos en que haya diastemas amplios y maloclusiones que precisen un gran movimiento para corregir los dientes.",
+                                            "Moderate rotations": "Movimientos complejos",
+                                            "Moderate spacing": "Diastemas amplios",
+                                            "Complex cases": "Casos complejos",
+                                            "Cases": "Casos",
+                                            "What is my case?": "¿Cuál es mi caso?",
+                                            "Duration": "Duración",
+                                            "Pay monthly": "Pago mensual",
+                                            "Pay at once": "Pago único",
+                                            "month": "mes",
+                                            "Teens": "Adolescentes",
+                                            "Between 6 and 8 months": "Entre 6 y 8 meses",
+                                            "More than 8 months": "Más de 8 meses",
+                                            "6-8 months": "6-8 meses",
+                                            "+8 months": "+8 meses",
+                                            "FV cost": "",
+                                            "offerRegularTitle": "",
+                                            "offerExtendedTitle": ""
+                                        },
+                                        "common-our-results": {
+                                            "reviewContent1": "Ya estoy en mi décimo paso, y sólo me quedan 4 alineadores. Estoy muy contenta con el seguimiento digital con los ortodoncistas, especialmente durante el COVID, y con el hecho de que la mayoría de los especialistas hablen inglés. Gracias, sois un equipo muy agradable.",
+                                            "reviewContent2": "Increíble el trato y la profesionalidad con la que me han tratado durante el tratamiento. Mejor imposible. Muchas gracias por ayudarme a tener mi sonrisa perfecta.",
+                                            "reviewContent3": "Fui a mi primera visita con ellos y ya salí del todo convencida. Hace ya unos meses que terminé y estoy usando los retenedores nocturnos. Puedo decir que estoy muy contenta!!",
+                                            "title": "\u003cspan style='color:#eb5e5b'\u003eResultados\u003c/span\u003e de pacientes reales"
+                                        },
+                                        "universal": {
+                                            "headTitle": "Alineadores invisibles para",
+                                            "headRedTitle1": "dientes sanos",
+                                            "headRedTitle2": "mejor sonrisa",
+                                            "headRedTitle3": "sonreír con seguridad",
+                                            "headRedTitle4": "la sonrisa de tus hijos",
+                                            "headSubtitle": "Consigue tu mejor sonrisa desde {{amount}} al mes",
+                                            "headText": "Revisión dental gratuita y vídeo 3D de tu futura sonrisa.",
+                                            "doctorsTitle": "La cadena líder de ortodoncia digital de nueva generación",
+                                            "doctorsDescription": "Ofrecemos un tratamiento médico a través de una experiencia holística e innovadora, utilizando nuestro propio equipo médico, clínicas propias específicamente diseñadas y utilización de la tecnología más novedosa del mercado. Nuestro enfoque hace que el tratamiento de ortodoncia invisible sea más preciso, rápido y adaptado a la vida de nuestros pacientes.",
+                                            "doctorsImagesTitle1": "Dr. Khaled Kasem",
+                                            "doctorsImagesDescription1": "Chief Orthodontist \u0026 Co-Founder",
+                                            "doctorsImagesTitle2": "Dra. Kira Lago",
+                                            "Ortodoncista": "Ortodoncista",
+                                            "doctorsImagesTitle3": "Dra. Judith Simón",
+                                            "doctorsImagesTitle4": "Dr. Ariel Valera",
+                                            "doctorsImagesTitle5": "Dra. Maria Quintana",
+                                            "doctorsImagesTitle6": "Dra. Esperanza Ceacero",
+                                            "appointmentTitle": "Empieza tu cambio pidiendo tu cita gratuita",
+                                            "resultsTitle": "Historias Reales",
+                                            "slidesTitle": "Echa un vistazo a nuestras clínicas",
+                                            "howItWorksTitle": "Cómo funciona",
+                                            "howItWorksStagesTitle1": "Estudio dental gratuito",
+                                            "howItWorksStagesDescription1": "Nuestros doctores harán un estudio completo de tu boca para determinar si puedes empezar con el tratamiento.",
+                                            "howItWorksStagesTitle2": "Ve tu futura sonrisa",
+                                            "howItWorksStagesDescription2": "¡Increíble! Verás el antes y el después de tu sonrisa en un vídeo 3D.",
+                                            "howItWorksStagesTitle3": "Seguimiento digital 24/7",
+                                            "howItWorksStagesDescription3": "Realiza tus scans, controla tu progreso y contacta con tu doctor.",
+                                            "advantagesTitle": "Alineadores",
+                                            "advantagesInvisibleTitle": " invisibles.",
+                                            "advantagesSubtitle": "Di adiós a los brackets.",
+                                            "advantagesDescription": "Nuestros materiales de última generación y los procesos que tenemos, hacen de nuestros alineadores la mejor opción para tu confort y tu bolsillo.",
+                                            "advantagesListTitle1": "Transparentes",
+                                            "advantagesListDescription1": "¡No te escondas más en las fotos! Sonríe sin complejos aunque lleves tus alineadores puestos.",
+                                            "advantagesListTitle2": "Removibles",
+                                            "advantagesListDescription2": "Disfruta de cualquier comida y bebida. Sácate los alineadores siempre que lo necesites.",
+                                            "advantagesListTitle3": "Cómodos",
+                                            "advantagesListDescription3": "Súper finos y casi imperceptibles. ¡No te darás ni cuenta!"
+                                        },
+                                        "common-form": {
+                                            "cityPlaceholder": "Ciudad",
+                                            "cityTypeError": "Selecciona una opción del menú desplegable.",
+                                            "firstNamePlaceholder": "Nombre",
+                                            "firstNameTypeError": "Rellena este campo obligatorio.",
+                                            "lastNamePlaceholder": "Apellido",
+                                            "lastNameTypeError": "Rellena este campo obligatorio.",
+                                            "instagramUserPlaceholder": "Usuario instagram",
+                                            "instagramUserTypeError": "Rellena este campo obligatorio.",
+                                            "nameMinError": "El nombre debe tener al menos 3 caracteres",
+                                            "nameMaxError": "El nombre no debe tener más de 50 caracteres",
+                                            "phoneNumberPlaceholder": "Número de teléfono",
+                                            "phoneNumberFormatError": "Introduce un número de teléfono con un mínimo de 7 dígitos.",
+                                            "phoneNumberTypeError": "Rellena este campo obligatorio.",
+                                            "emailPlaceholder": "Correo",
+                                            "emailFormatError": "La dirección de correo electrónico debe tener un formato correcto.",
+                                            "emailTypeError": "Rellena este campo obligatorio.",
+                                            "checkboxSpecialOffersError": "Para seguir acepta nuestra política de privacidad",
+                                            "checkboxSpecialOffersPlaceholder": "Quiero recibir recordatorios de citas y promociones exclusivas.",
+                                            "checkboxAcceptError": "Para seguir acepta nuestra política de privacidad",
+                                            "checkboxAcceptPlaceholderText": "Acepto la política de",
+                                            "checkboxAcceptPlaceholderLink": "privacidad.*",
+                                            "checkboxAcceptInstagramPlaceholderText": "Acepto la política de privacidad y las",
+                                            "checkboxAcceptInstagramPlaceholderLink": "Bases Legales Promo Instagram.*",
+                                            "action": "Continuar",
+                                            "titleModal": "Seleccionar clínica"
+                                        }
+                                    }
+                                }
+                            },
+                            "page": "/universal",
+                            "query": {
+                                "title": "🦷 Impress | Expertos en Ortodoncia Invisible 🦷",
+                                "description": "Somos Impress especialistas en tratamientos de ortodoncia invisible. Tenemos el mejor precio del mercado en Alineadores invisibles. Fácil, estético y rápido...",
+                                "contentFolder": "universal",
+                                "language": "spain",
+                                "version": "spain",
+                                "locale": "es"
+                            },
+                            "buildId": "CUbMuPsMe2B9RMOtuYv5C",
+                            "assetPrefix": "/special",
+                            "nextExport": true,
+                            "isFallback": false,
+                            "gip": true,
+                            "scriptLoader": []
+                        }
+                    </script>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="container footerContainer">
+                    <div class="footerLogo"></div>
+                    <div class="footerRows">
+                        <div class="footerRow">
+                            <div class="footerRowTitle">932 71 20 30</div>
+                            <div class="footerRowIcon icon-phone"></div>
+                        </div>
+                        <div class="footerRow">
+                            <div class="footerRowTitle">WhatsApp</div>
+                            <div class="footerRowIcon icon-whatsapp"></div>
+                        </div>
+                        <div class="footerRow">
+                            <div class="footerRowTitle">Email</div>
+                            <div class="footerRowIcon icon-email"></div>
+                        </div>
+                        <div class="footerRow">
+                            <div class="footerRowTitle">smile2impress.com</div>
+                            <div class="footerRowIcon icon-site"></div>
+                        </div>
+                        <div class="footerRow">
+                            <div class="footerRowTitle">Covid Measures</div>
+                            <div class="footerRowIcon icon-covid"></div>
+                        </div>
+                        <div class="footerRow">
+                            <div class="footerRowTitle">Política de Privacidad</div>
+                            <div class="footerRowIcon icon-external"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

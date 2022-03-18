@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[3568],{73568:function(a){a.exports=JSON.parse('{"mainSubtitle":"Ortodoncia para tu hijo en Barcelona","mapTitle":"Visita nuestra cl\xednica para adolescentes en Barcelona","mapAddress":"Carrer de Roger de Ll\xfaria 119, 08037, Barcelona"}')}}]);

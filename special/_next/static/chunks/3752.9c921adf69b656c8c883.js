@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[3752],{33752:function(e){e.exports=JSON.parse('{"Book appointment":"Termin vereinbaren","Privacy Policy":"Datenschutzerkl\xe4rung","countryName":{"germany":"Deutschland"},"whatsappMessage":"","email":"Email"}')}}]);

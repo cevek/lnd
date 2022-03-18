@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[2942],{32942:function(e){e.exports=JSON.parse('{"title":"Nous serons bient\xf4t dans votre ville"}')}}]);
