@@ -33,6 +33,81 @@
         <script src="/special/_next/static/CUbMuPsMe2B9RMOtuYv5C/_buildManifest.js" defer=""></script>
         <script src="/special/_next/static/CUbMuPsMe2B9RMOtuYv5C/_ssgManifest.js" defer=""></script>
 
+        <script>
+            const person = location.href.split('?')[1] ?? '';
+            const content = {
+                giorgio: {
+                    video: './videos/giorgio1.mp4',
+                    header: 'Los mejores tratos se cierran con una sonrisa. ',
+                    headerSmall: 'Ortodoncia invisible Impress',
+                    header2: 'Invisible, cómodo, se adapta a tu estilo de vida.',
+                    header3:
+                        '<span class="accent">Abarcamos todo tipo de casos:</span> desde problemas de mordida hasta casos más estéticos. Tratamos adultos y adolescentes. ',
+                    text3: 'Nuestro objetivo es conseguir la mejor versión de tu sonrisa. Utilizamos la última tecnología para ofrecerte un tratamiento de alta calidad.',
+                    quotes: [
+                        {
+                            text: 'Es la primera de su modalidad en el sur de Europa e integrar todo el proceso de producción ha sido una tarea compleja.',
+                            logo: 'lavanguardia',
+                        },
+                        {
+                            text: 'Impress es la única compañía especializada en ortodoncia invisible que dispone de un equipo de profesionales propio que trabaja con la tecnología médica más puntera.',
+                            logo: 'bdj',
+                        },
+                        {
+                            text: 'Los médicos profesionales de Impress son expertos en ortodoncia. Corrigen con ortodoncia invisible y brackets desde problemas de mordida hasta casos de adolescentes de cualquier edad.',
+                            logo: 'eleconomista',
+                        },
+                    ],
+                },
+                gabriela: {
+                    video: './videos/gabriela1.mp4',
+                    header: 'Sonríe sin filtros',
+                    headerSmall: 'con ortodoncia invisible Impress',
+                    header2: 'Invisible.<br>Cómodo.<br>Rapido.',
+                    header3:
+                        '<span class="accent">La ortodoncia que funciona:</span> arreglamos todo tipo de problemas de alineación y de oclusión dental. ',
+                    text3: 'Nuestro objetivo es que consigas la mejor sonrisa que puedas imaginar. Contamos con tecnología de última generación para ofrecerte un tratamiento cercano y profesional. ',
+                    quotes: [
+                        {
+                            text: 'Una mención al rompedor enfoque que  Impress aplica a la odontología, alejado del clásico entorno blanco y aséptico. ',
+                            logo: 'frame',
+                        },
+                        {
+                            text: 'La compañía ha revolucionado el sector de la ortodoncia invisible. Hacen uso de tecnología punta para el diagnóstico, tratamiento y seguimiento de todos los casos.',
+                            logo: 'denistry',
+                        },
+                        {
+                            text: 'Lo que más nos llamó la atención de la idea de negocio de Impress fue tanto su enfoque centrado en el paciente como su habilidad de crecer rápido y de manera sostenible. ',
+                            logo: 'eleconomista',
+                        },
+                    ],
+                },
+                carmen: {
+                    video: './videos/carmen1.mp4',
+                    header: 'Descubre la mejor versión de tu sonrisa',
+                    headerSmall: 'con ortodoncia invisible Impress',
+                    header2: 'Discretos.<br>Removibles.<br>Cómodos.',
+                    header3:
+                        '<span class="accent">Ortodoncia profesional:</span> arreglamos problemas de mordida y alineamos sonrisas.',
+                    text3: 'Nuestro objetivo es conseguir la mejor versión de tu sonrisa. Utilizamos la última tecnología para ofrecerte un tratamiento de alta calidad.',
+                    quotes: [
+                        {
+                            text: 'Una mención al rompedor enfoque que  Impress aplica a la odontología, alejado del clásico entorno blanco y aséptico. ',
+                            logo: 'frame',
+                        },
+                        {
+                            text: 'Es la primera del sur de Europa de estas dimensiones e integrar todo el proceso de producción ha sido una tarea compleja.',
+                            logo: 'lavanguardia',
+                        },
+                        {
+                            text: 'En su empeño por no comprometer nunca la salud ni la calidad, Impress solo contrata dentistas y ortodoncistas cualificados y va más allá de las tradicionales exploraciones en 3D.',
+                            logo: 'eleconomista',
+                        },
+                    ],
+                },
+            };
+            const personContent = content[person] ?? content.carmen;
+        </script>
         <link rel="stylesheet" href="./style.css" />
     </head>
     <body>
@@ -43,23 +118,33 @@
                     <div class="container topBlockContainer">
                         <div class="logo"></div>
                         <h1 class="head1">
-                            Discover the best version of your smile<br />
-                            <span class="head1Small accent">with Impress Aligners</span>
+                            <span id="header">Discover the best version of your smile</span><br />
+                            <span id="headerSmall" class="head1Small accent">with Impress Aligners</span>
                         </h1>
-                        <video class="poster" src="./videos/carmen1.mp4" loop autoplay muted></video>
+                        <video id="video" class="poster" loop autoplay muted></video>
                         <h1 class="head2">
-                            Invisible.<br />
-                            Removable.<br />
-                            Comfortable.<br />
-                            <span class="accent">From 49€/month</span>
+                            <span id="header2">
+                                Invisible.<br />
+                                Removable.<br />
+                                Comfortable.<br /></span
+                            ><br />
+                            <span class="accent">Desde 49€ al mes</span>
                         </h1>
+                        <script>
+                            document.querySelector('#header').textContent = personContent.header;
+                            document.querySelector('#headerSmall').textContent = personContent.headerSmall;
+                            document.querySelector('#header2').innerHTML = personContent.header2;
+                            document.querySelector('#video').src = personContent.video;
+                        </script>
                         <div class="bookWrap">
-                            <button class="book">Book free appointment</button>
-                            <div class="descr">All medical researches are free (including X-Rays, 3D scans etc.)</div>
+                            <button class="book">Pide tu cita gratuita</button>
+                            <div class="descr">
+                                La revisión dental incluye radiografía, escaneo 3D y consulta médica
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="slider" id="slider">
+                <div class="slider">
                     <div class="container">
                         <div class="sliderTop">
                             <div class="sliderIcon"></div>
@@ -69,28 +154,40 @@
                                 <div class="sliderDot"></div>
                             </div>
                         </div>
-                        <div class="sliderScroll">
-                            <div class="sliderItem sliderItemActive">
-                                Reflective of Impress’ unconventional approach to dentistry and far from any white,
-                                aseptic environment that you might expect.
-                                <div class="sliderItemFrom logo-frame"></div>
-                            </div>
-                            <div class="sliderItem">
-                                It is the first of its kind in southern Europe and integrating the entire production
-                                process has been a complex task.
-                                <div class="sliderItemFrom logo-finance"></div>
-                            </div>
-                            <div class="sliderItem">
-                                The new facility is the largest technology-driven treatment planning and clear aligner
-                                production facilities in Europe.
-                                <div class="sliderItemFrom logo-eleconomista"></div>
-                            </div>
+                    </div>
+                    <div id="slider" class="container sliderScroll">
+                        <!-- <div class="sliderItem sliderItemActive">
+                            Reflective of Impress’ unconventional approach to dentistry and far from any white, aseptic
+                            environment that you might expect.
+                            <div class="sliderItemFrom logo-frame"></div>
                         </div>
+                        <div class="sliderItem">
+                            It is the first of its kind in southern Europe and integrating the entire production process
+                            has been a complex task.
+                            <div class="sliderItemFrom logo-finance"></div>
+                        </div>
+                        <div class="sliderItem">
+                            The new facility is the largest technology-driven treatment planning and clear aligner
+                            production facilities in Europe.
+                            <div class="sliderItemFrom logo-eleconomista"></div>
+                        </div> -->
                     </div>
                 </div>
                 <script>
+                    const slider = document.querySelector('#slider');
+                    for (const quote of personContent.quotes) {
+                        const item = document.createElement('div');
+                        item.classList.add('sliderItem');
+                        item.innerHTML = quote.text;
+
+                        const logo = document.createElement('div');
+                        logo.classList.add('sliderItemFrom');
+                        logo.classList.add('logo-' + quote.logo);
+                        item.appendChild(logo);
+                        slider.appendChild(item);
+                    }
                     let options = {
-                        root: document.querySelector('#slider'),
+                        root: slider,
                         rootMargin: '0px',
                         threshold: [0, 0.5, 1],
                     };
@@ -114,44 +211,49 @@
                 <div class="stepsBlock">
                     <div class="container stepsContainer">
                         <div class="steps-header">
-                            <div class="how">How Impress works</div>
+                            <div class="how">Cómo funciona el tratamiento Impress</div>
                             <h2 class="steps-title">
-                                <span class="accent">3 steps</span> to get your perfect smile with invisible technology
+                                Estás a <span class="accent">3 pasos</span> de conseguir una sonrisa perfecta gracias a
+                                la tecnología invisible
                             </h2>
-                            <a href="" class="more">More about Invisible Aligners</a>
+                            <a id="showModalLink" href="" class="more">Más información sobre los alineadores Impress</a>
                         </div>
                         <div class="steps">
                             <div class="step">
                                 <div class="step-num">1</div>
-                                <h2 class="step-title">Get full medical check-up in our clinic</h2>
+                                <h2 class="step-title">Consigue una revisión dental completa en nuestra clínica</h2>
                                 <div class="step-descr">
-                                    Our orthodontists will do a complete study of your mouth. If there is a need to do a
-                                    pre-treatment—we’ve got you covered.
+                                    Nuestros doctores te realizarán un estudio completo de tu salud bucodental, ¡y si
+                                    necesitas pre o post tratamientos los cubriremos!
                                 </div>
                                 <div class="step-poster" style="background-image: url(./posters/im9.jpg)"></div>
                             </div>
                             <div class="step">
                                 <div class="step-num">2</div>
-                                <h2 class="step-title">Get your Impress Kit® right to your home</h2>
+                                <h2 class="step-title">Recibe tu Kit Impress en tu casa</h2>
                                 <div class="step-descr">
-                                    Before commiting to the treatment you will get to see the before and after of your
-                                    smile in a 3D video.
+                                    Antes de empezar el tratamiento podrás ver cómo quedarán tus dientes gracias a una
+                                    videosimulación 3D.
                                 </div>
                                 <div class="step-poster" style="background-image: url(./posters/im5.jpg)"></div>
                             </div>
                             <div class="step">
                                 <div class="step-num">3</div>
-                                <h2 class="step-title">Monitor progress with Impress App®</h2>
+                                <h2 class="step-title">
+                                    Monitorización del progreso de tu tratamiento con la App de Impress.
+                                </h2>
                                 <div class="step-descr">
-                                    Start your treatmnet and you will get regular online check-ups and full support with
-                                    our Care Team
+                                    Durante el tratamiento tendrás revisiones periódicas a distancia y soporte completo
+                                    con nuestro Care Team.
                                 </div>
                                 <div class="step-poster" style="background-image: url(./posters/im11.jpg)"></div>
                             </div>
                         </div>
                         <div class="bookWrap">
-                            <button class="book">Book free appointment</button>
-                            <div class="descr">All medical researches are free (including X-Rays, 3D scans etc.)</div>
+                            <button class="book">Pide tu cita gratuita</button>
+                            <div class="descr">
+                                La revisión dental incluye radiografía, escaneo 3D y consulta médica
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -160,57 +262,67 @@
                 <div class="container">
                     <div class="infoItems">
                         <div class="infoItem">
-                            <h2 class="infoTitle"><span class="accent">We do orthodontics.</span> Not cosmetology</h2>
+                            <h2 class="infoTitle">
+                                <span class="accent">Hacemos la ortodoncia invisible profesional </span>
+                            </h2>
                             <div class="infoDescr">
-                                Our goal is a healthy and beatufult smile of yours. We use latest technology to provide
-                                prefessional treartment.
+                                Nuestro objetivo: conseguir la mejor versión de tu sonrisa. Para realizar un tratamiento
+                                profesional utilizamos tecnología de última generación.
                             </div>
                             <div class="infoPoster" style="background-image: url(./posters/im1.jpg)"></div>
                         </div>
                         <div class="infoItem">
-                            <h2 class="infoTitle"><span class="accent">120 clinics</span> across 8 countries</h2>
+                            <h2 class="infoTitle"><span class="accent">120 clínicas</span> en 8 países</h2>
                             <div class="infoDescr">
-                                You can find one of our clinics near you. And you will enjoy coming there.
+                                Encontrarás una de nuestras clínicas cerca de ti. Disfruta de la experiencia.
                             </div>
                             <div class="infoPoster" style="background-image: url(./posters/im4.jpg)"></div>
                         </div>
                     </div>
                     <div class="bookWrap">
-                        <button class="book">Book free appointment</button>
-                        <div class="descr">All medical researches are free (including X-Rays, 3D scans etc.)</div>
+                        <button class="book">Pide tu cita gratuita</button>
+                        <div class="descr">La revisión dental incluye radiografía, escaneo 3D y consulta médica</div>
                     </div>
                 </div>
             </div>
             <div class="priceBlock">
                 <div class="container priceBlockContainer">
-                    <h2 class="priceTitle">Get the best price for the treatment tailored for you</h2>
+                    <h2 class="priceTitle">Consiguen el tratamiento que mejor se adapta a ti a un precio increíble.</h2>
                     <div class="priceTabs">
-                        <div id="tab1" class="priceTabTitle priceTabTitleSelected">1-6 month</div>
-                        <div id="tab2" class="priceTabTitle">7-14 month</div>
+                        <div id="tab1" class="priceTabTitle priceTabTitleSelected">1-6 meses</div>
+                        <div id="tab2" class="priceTabTitle">7-14 meses</div>
                     </div>
                     <div class="priceTabContent">
                         <div class="priceTabContentPriceRows">
                             <div class="priceTabContentPriceRow">
                                 <div class="priceTabContentPrice">
-                                    <span id="tab-price1">49</span><span class="priceTabContentEuro">€</span>
+                                    <div class="priceTabContentPriceFresh">
+                                        <span id="tab-price1">49</span><span class="priceTabContentEuro">€</span>
+                                    </div>
+                                    <div id="tab-price1-old" class="priceTabContentPriceOld">53€</div>
                                 </div>
-                                <div class="priceTabContentDur">monthly</div>
+                                <div class="priceTabContentDur">al mes</div>
                             </div>
                             <div class="priceTabContentPriceRow">
                                 <div class="priceTabContentPrice">
-                                    <span id="tab-price2">2490</span><span class="priceTabContentEuro">€</span>
+                                    <div class="priceTabContentPriceFresh">
+                                        <span id="tab-price2">2490</span><span class="priceTabContentEuro">€</span>
+                                    </div>
+                                    <div id="tab-price2-old" class="priceTabContentPriceOld">2690€</div>
                                 </div>
-                                <div class="priceTabContentDur">at once</div>
+                                <div class="priceTabContentDur">pago único</div>
                             </div>
                         </div>
                         <div class="priceTabContentText">
-                            Impress Kit with all aligners Impress App and 24/7 support Unlimited clinic visits
+                            Kit Impress con todos los alineadores. App de Impress y soporte 24/7. Visitas a clínica
+                            ilimitadas.
                         </div>
                         <div class="priceTabContentImages"></div>
                     </div>
                     <div class="priceDescr">
-                        Duration of the treamtent we will figure after a professional dental check-up. We work with most
-                        of cases and provide pre-treatment and post-treatment.<br /><br />
+                        Tras la revisión bucodental completa sabremos la duración de tu tratamiento. Tratamos la mayoría
+                        de casos, y cubrimos los pre y post tratamientos.
+                        <br /><br />
                         Comisión de apertura: 0,00%. TIN: 6,50 %. TAE: 6,69%. Sujeto a aprobación de la entidad de
                         crédito
                     </div>
@@ -220,27 +332,35 @@
                 const tab1 = document.querySelector('#tab1');
                 const tab2 = document.querySelector('#tab2');
                 const tabPrice1 = document.querySelector('#tab-price1');
+                const tabPrice1Old = document.querySelector('#tab-price1-old');
                 const tabPrice2 = document.querySelector('#tab-price2');
+                const tabPrice2Old = document.querySelector('#tab-price2-old');
                 const prices = [
-                    [49, 2490],
-                    [65, 3590],
+                    [49, 53, 2490, 2690],
+                    [65, 69, 3290, 3490],
                 ];
                 tab1.onclick = () => {
                     tab1.classList.add('priceTabTitleSelected');
                     tab2.classList.remove('priceTabTitleSelected');
                     tabPrice1.textContent = prices[0][0];
-                    tabPrice2.textContent = prices[0][1];
+                    tabPrice1Old.textContent = prices[0][1];
+                    tabPrice2.textContent = prices[0][2];
+                    tabPrice2Old.textContent = prices[0][3];
                 };
                 tab2.onclick = () => {
                     tab2.classList.add('priceTabTitleSelected');
                     tab1.classList.remove('priceTabTitleSelected');
                     tabPrice1.textContent = prices[1][0];
-                    tabPrice2.textContent = prices[1][1];
+                    tabPrice1Old.textContent = prices[1][1];
+                    tabPrice2.textContent = prices[1][2];
+                    tabPrice2Old.textContent = prices[1][3];
                 };
+                tab1.onclick();
             </script>
             <div class="bookForm">
+                <a id="book"></a>
                 <div class="container bookFormContainer">
-                    <h2 class="bookFormTitle">Book a free dental check-up</h2>
+                    <h2 class="bookFormTitle">Reserva una revisión dental gratuita.</h2>
                     <div id="__next">
                         <div class="NewAppointment_form__2itMy NewAppointment_root__3LTb5">
                             <div
@@ -462,5 +582,51 @@
                 </div>
             </div>
         </div>
+        <div id="modal" class="modalOverlay modalHidden">
+            <div class="modal">
+                <div id="modal-close" class="modalClose"></div>
+                <h2 class="modalHeader">Alineadores Impress</h2>
+                <video class="modalVideo" autoplay muted loop src="./videos/aligner.mp4"></video>
+                <div class="modalHeader2">¿Qué son los alineadores Impress?</div>
+                <div class="modalText">
+                    La moderna alternativa a los brackets. Es un sistema de ortodoncia mediante alineadores
+                    transparentes, removibles y realizados a partir de un plástico especial que alinean tus dientes de
+                    manera gradual.
+                </div>
+                <div class="modalHeader2">¿Cómo funciona?</div>
+                <div class="modalText">
+                    Sin brackets ni alambres. Los alineadores son removibles e invisibles. Gracias a la aplicación de un
+                    movimiento gradual, el tratamiento Impress es menos doloroso.
+                </div>
+            </div>
+        </div>
+        <script>
+            const modal = document.querySelector('#modal');
+            const closeModalIcon = document.querySelector('#modal-close');
+            const showModalLink = document.querySelector('#showModalLink');
+            closeModalIcon.onclick = closeModal;
+            showModalLink.onclick = (e) => {
+                e.preventDefault();
+                openModal();
+            };
+            function openModal() {
+                modal.classList.remove('modalHidden');
+                document.body.classList.add('modalOpened');
+                modal.classList.remove('modalHidden');
+            }
+            function closeModal() {
+                document.body.classList.remove('modalOpened');
+                modal.classList.add('modalHidden');
+            }
+
+            const book = document.querySelector('#book');
+            const bookBtns = document.querySelectorAll('.book');
+            for (const btn of bookBtns) {
+                btn.onclick = () => {
+                    const top = book.offsetTop;
+                    scrollTo({top, behavior: 'smooth'});
+                };
+            }
+        </script>
     </body>
 </html>
