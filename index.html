@@ -5,7 +5,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
-
+        <meta name="format-detection" content="telephone=no" />
         <link rel="preload" href="/special/_next/static/css/c5ee7d385ab95f29193d.css" as="style" />
         <link rel="stylesheet" href="/special/_next/static/css/c5ee7d385ab95f29193d.css" data-n-g="" />
         <link rel="preload" href="/special/_next/static/css/9387bfe41ea02f13fc6d.css" as="style" />
@@ -105,23 +105,36 @@
                         },
                     ],
                 },
+                aligners: {
+                    video: null,
+                    header: 'Alinea tus dientes con Impress sin dolor ni brackets',
+                    headerSmall: '',
+                    header2: null,
+                    header3: null,
+                    text3: null,
+                    quotes: null,
+                },
             };
             const personContent = content[person] ?? content.carmen;
         </script>
         <link rel="stylesheet" href="./style.css" />
     </head>
     <body>
+        <script>
+            document.body.classList.add(personContent === content.aligners ? 'noPerson' : 'hasPerson');
+        </script>
         <div class="root">
             <!-- <div class="real"></div> -->
             <div class="top">
                 <div class="topBlock">
                     <div class="container topBlockContainer">
                         <div class="logo"></div>
+                        <div class="posterAligners"></div>
                         <h1 class="head1">
                             <span id="header">Discover the best version of your smile</span><br />
                             <span id="headerSmall" class="head1Small accent">with Impress Aligners</span>
                         </h1>
-                        <video id="video" class="poster" loop autoplay muted></video>
+                        <video id="video" class="poster" loop autoplay muted playsinline></video>
                         <h1 class="head2">
                             <span id="header2">
                                 Invisible.<br />
@@ -144,7 +157,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="slider">
+                <div class="slider quoteSlider">
                     <div class="container">
                         <div class="sliderTop">
                             <div class="sliderIcon"></div>
@@ -155,7 +168,7 @@
                             </div>
                         </div>
                     </div>
-                    <div id="slider" class="container sliderScroll">
+                    <div id="quoteSlider" class="container sliderScroll">
                         <!-- <div class="sliderItem sliderItemActive">
                             Reflective of Impress’ unconventional approach to dentistry and far from any white, aseptic
                             environment that you might expect.
@@ -173,39 +186,103 @@
                         </div> -->
                     </div>
                 </div>
+                <div class="slider personSlider">
+                    <div class="container">
+                        <h2 class="sliderPersonHeader">Más de <span class="accent">50.000</span> pacientes felices</h2>
+                        <div class="sliderTop">
+                            <div class="sliderDots">
+                                <div class="sliderDot"></div>
+                                <div class="sliderDot"></div>
+                                <div class="sliderDot"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container sliderScroll">
+                        <div class="sliderItem sliderPersonItem">
+                            <div class="sliderPersonImg" style="background-image: url(./images/person1.jpg)"></div>
+                            <div class="sliderPersonTitle">
+                                <div class="sliderPersonTitleName">Victoria</div>
+                                <div class="sliderPersonTitleSubRow">
+                                    <div class="sliderPersonTitleSubLeft">Teeth crowding</div>
+                                    <div class="sliderPersonTitleSubRight">Impress Plus</div>
+                                </div>
+                                <div class="sliderPersonDesc">
+                                    Ya estoy en mi décimo paso y solo me quedan 4 sets de alineadores. Gracias al
+                                    tratamiento me siento más segura en público y mi vida social ha mejorado.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sliderItem sliderPersonItem">
+                            <div class="sliderPersonImg" style="background-image: url(./images/person2.jpg)"></div>
+                            <div class="sliderPersonTitle">
+                                <div class="sliderPersonTitleName">Jaime</div>
+                                <div class="sliderPersonTitleSubRow">
+                                    <div class="sliderPersonTitleSubLeft">Teeth crowding</div>
+                                    <div class="sliderPersonTitleSubRight">Impress Plus</div>
+                                </div>
+                                <div class="sliderPersonDesc">
+                                    Durante todo el tratamiento me trataron con gran profesionalidad. No podría haber
+                                    sido mejor. Muchísimas gracias por haberme ayudado a conseguir una sonrisa perfecta.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sliderItem sliderPersonItem">
+                            <div class="sliderPersonImg" style="background-image: url(./images/person3.jpg)"></div>
+                            <div class="sliderPersonTitle">
+                                <div class="sliderPersonTitleName">Triana</div>
+                                <div class="sliderPersonTitleSubRow">
+                                    <div class="sliderPersonTitleSubLeft">Teeth crowding</div>
+                                    <div class="sliderPersonTitleSubRight">Impress Plus</div>
+                                </div>
+                                <div class="sliderPersonDesc">
+                                    Al acabar el tratamiento comprendí el impacto que había tenido en mi vida. Me
+                                    resulta más fácil conocer a gente nueva y salir con mis amigos.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <script>
-                    const slider = document.querySelector('#slider');
-                    for (const quote of personContent.quotes) {
-                        const item = document.createElement('div');
-                        item.classList.add('sliderItem');
-                        item.innerHTML = quote.text;
+                    const quoteSlider = document.querySelector('#quoteSlider');
+                    if (personContent.quotes) {
+                        for (const quote of personContent.quotes) {
+                            const item = document.createElement('div');
+                            item.classList.add('sliderItem');
+                            item.innerHTML = quote.text;
 
-                        const logo = document.createElement('div');
-                        logo.classList.add('sliderItemFrom');
-                        logo.classList.add('logo-' + quote.logo);
-                        item.appendChild(logo);
-                        slider.appendChild(item);
-                    }
-                    let options = {
-                        root: slider,
-                        rootMargin: '0px',
-                        threshold: [0, 0.5, 1],
-                    };
-                    const dots = document.querySelectorAll('.sliderDot');
-                    let observer = new IntersectionObserver((e) => {
-                        for (const item of e) {
-                            const idx = [...item.target.parentNode.children].indexOf(item.target);
-                            if (item.intersectionRatio > 0.5) {
-                                dots[idx].classList.add('sliderDotActive');
-                                item.target.classList.add('sliderItemActive');
-                            } else {
-                                dots[idx].classList.remove('sliderDotActive');
-                                item.target.classList.remove('sliderItemActive');
-                            }
+                            const logo = document.createElement('div');
+                            logo.classList.add('sliderItemFrom');
+                            logo.classList.add('logo-' + quote.logo);
+                            item.appendChild(logo);
+                            quoteSlider.appendChild(item);
                         }
-                    }, options);
-                    for (const item of document.querySelectorAll('.sliderItem')) {
-                        observer.observe(item);
+                    }
+
+                    const sliders = document.querySelectorAll('.slider');
+                    for (const slider of sliders) {
+                        const dots = slider.querySelectorAll('.sliderDot');
+                        let observer = new IntersectionObserver(
+                            (e) => {
+                                for (const item of e) {
+                                    const idx = [...item.target.parentNode.children].indexOf(item.target);
+                                    if (item.intersectionRatio > 0.8) {
+                                        dots[idx].classList.add('sliderDotActive');
+                                        item.target.classList.add('sliderItemActive');
+                                    } else {
+                                        dots[idx].classList.remove('sliderDotActive');
+                                        item.target.classList.remove('sliderItemActive');
+                                    }
+                                }
+                            },
+                            {
+                                root: slider,
+                                rootMargin: '0px',
+                                threshold: [0, 0.5, 0.8, 1],
+                            },
+                        );
+                        for (const item of slider.querySelectorAll('.sliderItem')) {
+                            observer.observe(item);
+                        }
                     }
                 </script>
                 <div class="stepsBlock">
@@ -235,7 +312,10 @@
                                     Antes de empezar el tratamiento podrás ver cómo quedarán tus dientes gracias a una
                                     videosimulación 3D.
                                 </div>
-                                <div class="step-poster" style="background-image: url(./posters/im5.jpg)"></div>
+                                <div
+                                    class="step-poster"
+                                    style="background-image: url(./posters/im5.jpg); background-position: 25% 0"
+                                ></div>
                             </div>
                             <div class="step">
                                 <div class="step-num">3</div>
@@ -263,20 +343,26 @@
                     <div class="infoItems">
                         <div class="infoItem">
                             <h2 class="infoTitle">
-                                <span class="accent">Hacemos la ortodoncia invisible profesional </span>
+                                Hacemos la ortodoncia invisible <span class="accent">profesional </span>
                             </h2>
                             <div class="infoDescr">
                                 Nuestro objetivo: conseguir la mejor versión de tu sonrisa. Para realizar un tratamiento
                                 profesional utilizamos tecnología de última generación.
                             </div>
-                            <div class="infoPoster" style="background-image: url(./posters/im1.jpg)"></div>
+                            <div
+                                class="infoPoster"
+                                style="background-image: url(./posters/im1.jpg); background-position: 50% 0"
+                            ></div>
                         </div>
                         <div class="infoItem">
                             <h2 class="infoTitle"><span class="accent">120 clínicas</span> en 8 países</h2>
                             <div class="infoDescr">
                                 Encontrarás una de nuestras clínicas cerca de ti. Disfruta de la experiencia.
                             </div>
-                            <div class="infoPoster" style="background-image: url(./posters/im4.jpg)"></div>
+                            <div
+                                class="infoPoster"
+                                style="background-image: url(./posters/im4.jpg); background-position: 95% 0"
+                            ></div>
                         </div>
                     </div>
                     <div class="bookWrap">
@@ -314,8 +400,9 @@
                             </div>
                         </div>
                         <div class="priceTabContentText">
-                            Kit Impress con todos los alineadores. App de Impress y soporte 24/7. Visitas a clínica
-                            ilimitadas.
+                            Kit Impress con todos los alineadores.<br />
+                            App de Impress y soporte 24/7. <br />
+                            Visitas a clínica ilimitadas.
                         </div>
                         <div class="priceTabContentImages"></div>
                     </div>
@@ -360,7 +447,7 @@
             <div class="bookForm">
                 <a id="book"></a>
                 <div class="container bookFormContainer">
-                    <h2 class="bookFormTitle">Reserva una revisión dental gratuita.</h2>
+                    <h2 class="bookFormTitle">Reserva una revisión dental gratuita</h2>
                     <div id="__next">
                         <div class="NewAppointment_form__2itMy NewAppointment_root__3LTb5">
                             <div

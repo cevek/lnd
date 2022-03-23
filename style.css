@@ -84,6 +84,9 @@ h1 {
 .head1 {
 }
 
+.noPerson .poster {
+    display: none;
+}
 .poster {
     box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.2);
     border-radius: 30px;
@@ -91,6 +94,17 @@ h1 {
     object-fit: cover;
     width: 100%;
 }
+.hasPerson .posterAligners {
+    display: none;
+}
+.posterAligners {
+    background: url(./images/bracketvsimpress.png) no-repeat center, url(./images/poster-aligners.jpg) center;
+    background-size: auto, cover;
+    margin: 0 -25px;
+    height: 480px;
+    display: flex;
+}
+
 .head1Small {
     font-size: 13px;
 }
@@ -124,6 +138,7 @@ h1 {
     margin: 0;
     width: 256px;
     cursor: pointer;
+    font-weight: 500;
 }
 
 .descr {
@@ -139,6 +154,12 @@ h1 {
 Slider
 
 */
+.hasPerson .personSlider {
+    display: none;
+}
+.noPerson .quoteSlider {
+    display: none;
+}
 .slider {
     display: flex;
     flex-direction: column;
@@ -208,7 +229,48 @@ Slider
 .sliderItemFrom {
     margin-top: 18px;
 }
+.sliderPersonHeader {
+    margin-bottom: 10px;
+}
+.sliderPersonItem {
+    font-weight: normal;
+    max-width: 376px;
+    opacity: 1;
+}
+.sliderPersonImg {
+    width: 100%;
+    background-size: cover;
+    aspect-ratio: 1.28;
+    margin-bottom: 16px;
+}
+.sliderPersonTitle {
+    display: flex;
+    flex-direction: column;
+}
+.sliderPersonTitleName {
+    color: #1d2832;
+    font-size: 17px;
+}
+.sliderPersonTitleSubRow {
+    display: flex;
+    color: #677792;
+    font-size: 13px;
+}
+.sliderPersonTitleSubLeft {
+    margin-right: auto;
+}
+.sliderPersonTitleSubRight {
+}
+.sliderPersonDesc {
+    margin-top: 8px;
+    font-size: 17px;
+    color: #485366;
+}
+/*
 
+More
+
+*/
 .more {
     display: flex;
     gap: 1px;
@@ -276,7 +338,6 @@ Steps
     justify-content: center;
     border-radius: 100px;
     margin-bottom: 20px;
-    padding-top: 3px;
 }
 
 .step-title {
@@ -423,6 +484,7 @@ Price Block
     font-weight: 500;
     font-size: 17px;
     margin-top: 6px;
+    text-align: right;
 }
 .priceTabContentText {
     font-size: 17px;
@@ -502,6 +564,9 @@ Footer
 
 .footerRowTitle {
     flex: 1;
+    color: white;
+    text-decoration: none;
+    pointer-events: none;
 }
 .footerRowIcon {
 }
@@ -531,6 +596,7 @@ Modal
     border-radius: 30px;
     box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.2);
     padding: 20px;
+    padding-bottom: 48px;
     display: flex;
     flex-direction: column;
     overscroll-behavior: none;
@@ -557,6 +623,8 @@ Modal
     font-size: 22px;
     text-align: center;
     margin-top: 80px;
+    z-index: 1;
+    position: relative;
 }
 .modalVideo {
     aspect-ratio: 1;
@@ -572,6 +640,7 @@ Modal
     font-weight: 700;
 }
 .modalText {
+    color: #485366;
 }
 /*
 
