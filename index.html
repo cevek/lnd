@@ -672,18 +672,20 @@
         <div id="modal" class="modalOverlay modalHidden">
             <div class="modal">
                 <div id="modal-close" class="modalClose"></div>
-                <h2 class="modalHeader">Alineadores Impress</h2>
-                <video class="modalVideo" autoplay muted loop src="./videos/aligner.mp4"></video>
-                <div class="modalHeader2">¿Qué son los alineadores Impress?</div>
-                <div class="modalText">
-                    La moderna alternativa a los brackets. Es un sistema de ortodoncia mediante alineadores
-                    transparentes, removibles y realizados a partir de un plástico especial que alinean tus dientes de
-                    manera gradual.
-                </div>
-                <div class="modalHeader2">¿Cómo funciona?</div>
-                <div class="modalText">
-                    Sin brackets ni alambres. Los alineadores son removibles e invisibles. Gracias a la aplicación de un
-                    movimiento gradual, el tratamiento Impress es menos doloroso.
+                <div class="modalContent">
+                    <h2 class="modalHeader">Alineadores Impress</h2>
+                    <video class="modalVideo" autoplay muted loop playsinline src="./videos/aligner.mp4"></video>
+                    <div class="modalHeader2">¿Qué son los alineadores Impress?</div>
+                    <div class="modalText">
+                        La moderna alternativa a los brackets. Es un sistema de ortodoncia mediante alineadores
+                        transparentes, removibles y realizados a partir de un plástico especial que alinean tus dientes
+                        de manera gradual.
+                    </div>
+                    <div class="modalHeader2">¿Cómo funciona?</div>
+                    <div class="modalText">
+                        Sin brackets ni alambres. Los alineadores son removibles e invisibles. Gracias a la aplicación
+                        de un movimiento gradual, el tratamiento Impress es menos doloroso.
+                    </div>
                 </div>
             </div>
         </div>
@@ -699,10 +701,12 @@
             function openModal() {
                 modal.classList.remove('modalHidden');
                 document.body.classList.add('modalOpened');
+                document.documentElement.classList.add('modalOpened');
                 modal.classList.remove('modalHidden');
             }
             function closeModal() {
                 document.body.classList.remove('modalOpened');
+                document.documentElement.classList.remove('modalOpened');
                 modal.classList.add('modalHidden');
             }
 
