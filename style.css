@@ -796,15 +796,56 @@ Form patch
     color: black;
 }
 
+.css-qekz2n-menu {
+    color: black;
+}
+.ClinicBlock_root__-otgi {
+    background-color: #344d6a;
+    opacity: 0.4;
+}
+.ClinicBlock_root_checked__1VDqC {
+    background-color: #344d6a;
+    opacity: 1;
+}
+.ClinicBlock_title__3_BQg {
+    color: white;
+}
+
 /*
 
 Media
 
 */
 @media (min-width: 660px) {
+    h1 {
+        font-size: 40px !important;
+        line-height: 44px;
+    }
+    h2 {
+        font-size: 30px !important;
+    }
+    .head1Small {
+        font-size: 15px;
+    }
+    .descr {
+        font-size: 15px;
+    }
+    .sliderPersonTitleSubRow {
+        font-size: 15px;
+    }
+    .more {
+        font-size: 15px;
+    }
+    .Checkbox_placeholder__1T6Bh {
+        font-size: 15px;
+    }
     .logo {
         margin: 0;
     }
+    .sliderItem {
+        font-size: 22px;
+    }
+
     .poster,
     .step-poster,
     .infoPoster {
