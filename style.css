@@ -139,12 +139,12 @@ h1 {
     margin: 0;
     width: 256px;
     cursor: pointer;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .descr {
     text-align: center;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 13px;
     line-height: 140%;
     color: #677792;
@@ -275,7 +275,7 @@ More
 .more {
     display: flex;
     gap: 1px;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 13px;
     color: #677792;
     text-decoration: none;
@@ -348,7 +348,7 @@ Steps
     margin-bottom: 3px;
 }
 .step-descr {
-    font-weight: 500;
+    font-weight: 400;
     font-size: 17px;
     line-height: 130%;
     color: #485366;
@@ -385,7 +385,7 @@ Info Block
     margin-bottom: 14px;
 }
 .infoDescr {
-    font-weight: 500;
+    font-weight: 400;
     font-size: 17px;
     line-height: 130%;
     color: #485366;
@@ -482,7 +482,7 @@ Price Block
     border-radius: 10px;
 }
 .priceTabContentDur {
-    font-weight: 500;
+    font-weight: 400;
     font-size: 17px;
     margin-top: 6px;
     text-align: right;
@@ -501,7 +501,7 @@ Price Block
 }
 .priceDescr {
     opacity: 0.6;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 17px;
     line-height: 130%;
     margin-top: 21px;
