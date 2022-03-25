@@ -200,7 +200,7 @@ Slider
     width: 100%;
 } */
 .sliderScroll {
-    padding: 27px 25px;
+    padding: 27px 0 25px 27px;
     display: flex;
     overflow-x: scroll;
     min-width: 0;
@@ -209,6 +209,10 @@ Slider
     /* margin: 0 -25px; */
     /* max-width: 640px; */
     scroll-snap-type: x mandatory;
+}
+.sliderScroll::after {
+    content: '';
+    min-width: 5px;
 }
 .sliderScroll::-webkit-scrollbar {
     display: none;
@@ -224,6 +228,7 @@ Slider
     opacity: 0.3;
     scroll-snap-align: center;
 }
+
 .sliderItemActive {
     opacity: 1;
 }
@@ -489,7 +494,10 @@ Price Block
 }
 .priceTabContentText {
     font-size: 17px;
-    line-height: 31px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    line-height: 20px;
 }
 .priceTabContentImages {
     width: 251px;
