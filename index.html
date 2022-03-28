@@ -686,6 +686,19 @@
                         de un movimiento gradual, el tratamiento Impress es menos doloroso.
                     </div>
                 </div>
+                <div class="modalContentFade"></div>
+                <script>
+                    const modalContent = document.querySelector('.modalContent');
+                    const modalContentFade = document.querySelector('.modalContentFade');
+                    const onScroll = () => {
+                        const underScrollContentHeight =
+                            modalContent.scrollHeight - (modalContent.scrollTop + modalContent.clientHeight);
+                        modalContentFade.style.opacity = underScrollContentHeight / 20;
+                        console.log(underScrollContentHeight);
+                    };
+                    onScroll();
+                    modalContent.onscroll = onScroll;
+                </script>
             </div>
         </div>
         <script>
